@@ -40,7 +40,10 @@ public class MessageController {
     }
 
     @PutMapping("{id}")
-    public Message update(@PathVariable("id") Message messageFromDb, @RequestBody Message message) {
+    public Message update(
+            @PathVariable("id") Message messageFromDb,
+            @RequestBody Message message
+    ) {
         BeanUtils.copyProperties(message, messageFromDb, "id");
 
         return messageRepository.save(messageFromDb);

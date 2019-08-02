@@ -12,3 +12,19 @@ spring:
         jdbc:
           lob:
           non_contextual_creation: true
+
+security:
+  oauth2:
+    client:
+      id: 497830438-3vuf5d3jq6krhgfil8l3obbrrds7kd17.apps.googleusercontent.com
+      client-secret: QXX_OvsnXDI4Ke4j6RP8uC6x
+      access-token-uri: https://www.googleapis.com/oauth2/v4/token
+      user-authorization-uri: https://accounts.google.com/o/oauth2/v2/auth
+      authentication-scheme: form
+      scope: openid,email,profile
+    resource:
+      user-info-uri: https://www.googleapis.com/oauth2/v3/userinfo
+      prefer-token-info: true
+
+server:
+  port: 8080
