@@ -1,5 +1,6 @@
 package com.letscode.sarafan.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 
 import javax.persistence.Entity;
@@ -22,5 +23,6 @@ public class User {
     private String email;
     private String gender;
     private String locale;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime lastVisit;
 }
